@@ -1,0 +1,47 @@
+<center>
+
+<style>
+.clicky {
+    background: transparent;
+    color: black;
+    padding: none;
+    border: none;
+}
+.black {
+    background: black;
+    color: white;
+    padding: none;
+    border: none;
+}
+</style>
+
+<button onclick="playVid()" type="button" class="clicky">[ PLAY ]
+</button>
+
+<video id="video" playsinline
+src="https://www.dropbox.com/s/gbkq2lfjm1drt92/mitoskin%20ad%203%20%28low%20res%2C%20mobile%20cropped%29.mp4?raw=1&autoplay"
+type="video/mp4">
+Your browser does not support this video. Visit our social media for related content.
+</video>
+
+<script>
+var vid = document.getElementById("video"); 
+
+function playVid() { 
+  vid.play(); 
+}
+
+function pauseVid() { 
+  vid.pause(); 
+}
+
+document.addEventListener('click', function(e) {
+    var target = e.target;
+    if (!target.matches('button')) {
+        return;
+    }
+    target.classList.toggle('black');
+}, false);
+</script>
+
+</center>
